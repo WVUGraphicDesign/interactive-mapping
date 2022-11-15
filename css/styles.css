@@ -1,0 +1,80 @@
+/* line 1, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map {
+  position: relative;
+}
+
+/* line 3, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map button {
+  border: none;
+  background: transparent;
+  position: absolute;
+}
+
+/* line 7, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map button i {
+  color: red;
+  font-size: 3em;
+}
+
+/* line 12, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map button:hover i {
+  opacity: .9;
+}
+
+/* line 16, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map button.marker-1 {
+  top: 36%;
+  left: 33%;
+}
+
+/* line 21, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map button.marker-2 {
+  top: 31%;
+  left: 53%;
+}
+
+/* line 26, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map img {
+  width: 100%;
+}
+
+/* line 32, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map-info {
+  background-color: red;
+  padding: 1em;
+  color: white;
+}
+
+/* line 33, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map-info h2 {
+  font-size: .75em;
+}
+
+/* line 40, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map-info .loc {
+  display: none;
+}
+
+/* line 45, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map-info #loc-content.active, .map-info #loc-content-2.active {
+  display: block;
+}
+
+/* line 49, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map-info #loc-content h3, .map-info #loc-content-2 h3 {
+  font-size: 2em;
+}
+
+/* line 53, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map-info #loc-content ul, .map-info #loc-content-2 ul {
+  padding: 0;
+}
+
+/* line 55, ../../../../../Volumes/GoogleDrive-118321247978423589732/My Drive/Fall 2022/ART 324/interactive map demo/sass/styles.scss */
+.map-info #loc-content ul li, .map-info #loc-content-2 ul li {
+  list-style: none;
+  padding: .5em 0;
+  border-top: 1px solid #fff;
+}
+
+/*# sourceMappingURL=styles.css.map */
