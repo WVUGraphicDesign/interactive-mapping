@@ -12,10 +12,25 @@
             i {
                 opacity: .9;
             }
+            :after {
+                content: "";
+                position: absolute;
+                top: 55px;
+                left: 0;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
         }
         &.marker-1 {
         top: 36%;
         left: 33%;
+        &:hover :after {
+            content: "marker 1";
+            font-size: 16px;
+            color: #fff;
+            
+        }
         }
 
         &.marker-2 {
