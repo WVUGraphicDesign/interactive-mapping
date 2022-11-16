@@ -1,2 +1,34 @@
+.map {
+  position: relative;
+}
 
-/*# sourceMappingURL=styles.css.map */
+.map button {
+  border: none;
+  background: transparent;
+  position: absolute;
+  font-size: 2.5em;
+  color: red;
+}
+
+.map button.marker-1 {
+  top: 45%;
+  left: 23%;
+}
+
+.map button.marker-2 {
+  top: 31%;
+  left: 53%;
+}
+
+.map button span {
+  background-color: red;
+  color: #fff;
+  padding: .5em;
+  font-size: .5em;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.map button:hover span {
+  opacity: 1;
+}

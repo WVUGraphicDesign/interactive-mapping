@@ -1,0 +1,36 @@
+.map {
+    position: relative;
+
+    button {
+        border: none;
+        background: transparent;
+        position: absolute;
+        font-size: 2.5em;
+        color: red;
+        &.marker-1 {
+            top: 45%;
+            left: 23%;
+        }
+
+        &.marker-2 {
+            top: 31%;
+            left: 53%;
+        }
+
+        span {
+            background-color: red;
+            color: #fff;
+            padding: .5em;
+            font-size: .5em;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        &:hover {
+            span {
+                opacity: 1;
+            }
+        }
+    }
+
+}
