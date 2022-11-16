@@ -32,3 +32,25 @@
 .map button:hover span {
   opacity: 1;
 }
+
+.map-info {
+  background-color: red;
+  color: #fff;
+}
+
+.map-info .loc {
+  display: none;
+}
+
+.map-info .loc ul {
+  padding: 0;
+}
+
+.map-info .loc ul li {
+  list-style: none;
+  border-bottom: 1px solid #fff;
+}
+
+.map-info .loc.active {
+  display: block;
+}

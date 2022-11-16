@@ -34,3 +34,24 @@
     }
 
 }
+
+.map-info {
+    background-color: red;
+    color: #fff;
+    .loc {
+        display: none;
+        ul {
+            padding: 0;
+            li {
+                list-style: none;
+                border-bottom: 1px solid #fff;
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+   
+
+}

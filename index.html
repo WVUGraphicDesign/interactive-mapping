@@ -20,17 +20,9 @@
         <div class="col-lg-8 map">
             <button type="button" class="marker-1" onclick="mapMarker();">
                 <i class="fa-solid fa-location-dot"></i>
-                <span class="popup">
-                    Yawa's House
-                </span>
             </button>
+            
 
-            <button type="button" class="marker-2" onclick="mapMarker();">
-                <i class="fa-solid fa-location-dot"></i>
-                <span class="popup">
-                    School
-                </span>
-            </button>
             
             <img class="img-fluid" src="img/map.png" alt="map">
             
@@ -46,6 +38,7 @@
                     <li>Etc.</li>
                     <li>Etc.</li>
                 </ul>
+                <button>Go to page</button>
             </div>
 
             
@@ -54,8 +47,17 @@
 
     </div><!--closes container-->
     
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+
+    var locContent = document.getElementById("loc-content");
+
+    function mapMarker() {
+        locContent.classList.toggle("active");
+    }
+
+ </script>
  
 </body>
 </html>
