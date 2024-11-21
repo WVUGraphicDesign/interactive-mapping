@@ -11,30 +11,26 @@
   z-index: 100;
 }
 .map button.john {
-  top: 45%;
+  top: 47%;
   left: 23%;
 }
 .map button.sam {
-  top: 31%;
+  top: 33%;
   left: 53%;
 }
 .map button.alice {
   bottom: 29%;
   left: 60%;
 }
-.map button span {
-  background-color: red;
-  color: #fff;
-  padding: 0.5em;
-  font-size: 0.5em;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
 .map button:hover span {
   opacity: 1;
 }
+.map button.active-marker i {
+  color: red;
+}
 
 .map-info {
+  padding: 2rem;
   background-color: teal;
   color: #fff;
 }

@@ -14,13 +14,10 @@
         <h1>Interactive Map Demo</h1>
         <br>
         <div class="row">
-        <aside class="col-lg-2">
-            Some content
-        </aside>
-        <div class="col-lg-8 map">
+       <div class="col-lg-9 map">
             <img class="img-fluid" src="img/map.png" alt="map">
 
-            <button type="button" class="marker john" data-location="john">
+            <button type="button" class="marker active-marker john" data-location="john">
                 <i class="fa-solid fa-location-dot"></i>
             </button>
 
@@ -34,10 +31,10 @@
            
             
         </div>
-        <div class="col-lg-2 map-info">
+        <div class="col-lg-3 map-info">
             <h2>Map Information</h2>
             <div class="loc-content active" data-location="john">
-                <h3>Lulu's House</h3>
+                <h3>John's House</h3>
                 <ul>
                     <li>Built: 1979</li>
                     <li>Occupancy: 8</li>
@@ -81,39 +78,32 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
  <script>
-// Select all markers
 var markers = document.querySelectorAll('.marker');
 
-// Add event listeners to all markers
 markers.forEach(function(marker) {
     marker.addEventListener('click', function() {
-        // Get the data-location attribute of the clicked marker
         var location = marker.getAttribute('data-location');
-
-        // Find the content section that matches the data-location
         var contentToToggle = document.querySelector('.loc-content[data-location="' + location + '"]');
 
         if (contentToToggle) {
-            // Check if the content is currently active (visible)
             var isActive = contentToToggle.classList.contains('active');
-
-            // Hide all content sections
             var locContents = document.querySelectorAll('.loc-content');
             locContents.forEach(function(content) {
                 content.classList.remove('active');
             });
 
-            // If the content was not active before, show it
+            markers.forEach(function(mrk) {
+                mrk.classList.remove('active-marker');
+            });
             if (!isActive) {
                 contentToToggle.classList.add('active');
+                marker.classList.add('active-marker');
             }
-            // If it was active, it remains hidden (since we removed 'active' from all contents)
         }
     });
 });
 
-
-    </script>
+</script>
 
  
 </body>

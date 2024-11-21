@@ -10,12 +10,12 @@
         color: teal;
         z-index: 100;
         &.john {
-            top: 45%;
+            top: 47%;
             left: 23%;
         }
 
         &.sam {
-            top: 31%;
+            top: 33%;
             left: 53%;
         }
 
@@ -24,25 +24,23 @@
             left: 60%;
         }
 
-        span {
-            background-color: red;
-            color: #fff;
-            padding: .5em;
-            font-size: .5em;
-            opacity: 0;
-            transition: opacity .5s;
-        }
-
         &:hover {
             span {
                 opacity: 1;
             }
+        }
+        &.active-marker {
+            i {
+                color: red;
+            }
+            
         }
     }
 
 }
 
 .map-info {
+    padding: 2rem;
     background-color: teal;
     color: #fff;
 
