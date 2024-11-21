@@ -22,6 +22,10 @@
   bottom: 29%;
   left: 60%;
 }
+.map button.fred {
+  bottom: 33%;
+  left: 38%;
+}
 .map button:hover span {
   opacity: 1;
 }
