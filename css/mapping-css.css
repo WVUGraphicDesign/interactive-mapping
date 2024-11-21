@@ -6,7 +6,7 @@
   border: none;
   background: transparent;
   position: absolute;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: teal;
   z-index: 100;
 }
@@ -22,11 +22,31 @@
   bottom: 29%;
   left: 60%;
 }
-.map button:hover span {
-  opacity: 1;
+.map button .info {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  width: 120px;
+  background-color: teal;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
-.map button.active-marker i {
-  color: red;
+.map button .info a {
+  font-size: 0.8rem;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  border-top: 1px solid #fff;
+}
+.map button .info a:hover {
+  color: #000;
+}
+.map button:hover .info {
+  opacity: 1;
 }
 
 .map-info {
@@ -38,18 +58,12 @@
   margin-top: 20px;
   font-size: 1.5rem;
 }
-.map-info .loc-content {
-  display: none;
-}
 .map-info .loc-content ul {
   padding: 0;
 }
 .map-info .loc-content ul li {
   list-style: none;
   border-bottom: 1px solid #fff;
-}
-.map-info .loc-content.active {
-  display: block;
 }
 .map-info .loc-content a {
   display: block;

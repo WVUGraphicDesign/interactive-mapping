@@ -1,0 +1,87 @@
+.map {
+    position: relative;
+    padding: 0;
+  
+    button {
+      border: none;
+      background: transparent;
+      position: absolute;
+      font-size: 2.5rem;
+      color: teal;
+      z-index: 100;
+      &.john {
+        top: 47%;
+        left: 23%;
+      }
+  
+      &.school {
+        top: 33%;
+        left: 53%;
+      }
+  
+      &.alice {
+        bottom: 29%;
+        left: 60%;
+      }
+
+      .info {
+        position: absolute;
+        top: 0;
+        left: 45px;
+        width: 120px;
+        background-color: teal;
+        color: #fff;
+        padding: .5rem;
+        font-size: 1rem;
+        text-align: left;
+        opacity: 0;
+        transition: opacity .5s;
+        a {
+            font-size: .8rem;
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            border-top: 1px solid #fff;
+            &:hover {
+                color: #000;
+            }
+        }
+      }
+  
+      &:hover {
+        .info {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  .map-info {
+    padding: 2rem;
+    background-color: teal;
+    color: #fff;
+  
+    h3 {
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
+    .loc-content {
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          border-bottom: 1px solid #fff;
+        }
+      }
+
+      a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+  
