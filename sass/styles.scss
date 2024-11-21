@@ -1,20 +1,27 @@
 .map {
     position: relative;
+    padding: 0;
 
     button {
         border: none;
         background: transparent;
         position: absolute;
         font-size: 2.5em;
-        color: red;
-        &.marker-1 {
+        color: teal;
+        z-index: 100;
+        &.john {
             top: 45%;
             left: 23%;
         }
 
-        &.marker-2 {
+        &.sam {
             top: 31%;
             left: 53%;
+        }
+
+        &.alice {
+            bottom: 29%;
+            left: 60%;
         }
 
         span {
@@ -36,9 +43,14 @@
 }
 
 .map-info {
-    background-color: red;
+    background-color: teal;
     color: #fff;
-    .loc {
+
+    h3 {
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+    .loc-content {
         display: none;
         ul {
             padding: 0;
@@ -50,6 +62,14 @@
 
         &.active {
             display: block;
+        }
+        a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                color: #000;
+            }
         }
     }
    

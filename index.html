@@ -18,24 +18,58 @@
             Some content
         </aside>
         <div class="col-lg-8 map">
-            <button type="button" class="marker-1" onclick="mapMarker();">
+            <img class="img-fluid" src="img/map.png" alt="map">
+
+            <button type="button" class="marker john" data-location="john">
                 <i class="fa-solid fa-location-dot"></i>
             </button>
-            <img class="img-fluid" src="img/map.png" alt="map">
+
+            <button type="button" class="marker sam" data-location="school">
+                <i class="fa-solid fa-location-dot"></i>
+            </button>
+
+            <button type="button" class="marker alice" data-location="alice">
+                <i class="fa-solid fa-location-dot"></i>
+            </button>
+           
             
         </div>
         <div class="col-lg-2 map-info">
             <h2>Map Information</h2>
-            <div id="loc-content" class="loc">
+            <div class="loc-content active" data-location="john">
                 <h3>Lulu's House</h3>
                 <ul>
                     <li>Built: 1979</li>
                     <li>Occupancy: 8</li>
-                    <li>County: Ridge</li>
+                    <li>County: Taylor</li>
                     <li>Etc.</li>
                     <li>Etc.</li>
                 </ul>
-                <button>Go to page</button>
+                <a href="#">Go to page</a>
+            </div>
+
+            <div class="loc-content" data-location="school">
+                <h3>School</h3>
+                <ul>
+                    <li>Built: 1992</li>
+                    <li>Occupancy: 12</li>
+                    <li>County: Fairmont</li>
+                    <li>Etc.</li>
+                    <li>Etc.</li>
+                </ul>
+                <a href="#">Go to page</a>
+            </div>
+
+            <div class="loc-content" data-location="alice">
+                <h3>Alice's House</h3>
+                <ul>
+                    <li>Built: 2000</li>
+                    <li>Occupancy: 5</li>
+                    <li>County: Morgantown</li>
+                    <li>Etc.</li>
+                    <li>Etc.</li>
+                </ul>
+                <a href="#">Go to page</a>
             </div>
 
             
@@ -47,15 +81,40 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
  <script>
+// Select all markers
+var markers = document.querySelectorAll('.marker');
 
-    var locContent = document.getElementById("loc-content");
+// Add event listeners to all markers
+markers.forEach(function(marker) {
+    marker.addEventListener('click', function() {
+        // Get the data-location attribute of the clicked marker
+        var location = marker.getAttribute('data-location');
 
-    function mapMarker() {
-        locContent.classList.toggle("active");
-    }
+        // Find the content section that matches the data-location
+        var contentToToggle = document.querySelector('.loc-content[data-location="' + location + '"]');
+
+        if (contentToToggle) {
+            // Check if the content is currently active (visible)
+            var isActive = contentToToggle.classList.contains('active');
+
+            // Hide all content sections
+            var locContents = document.querySelectorAll('.loc-content');
+            locContents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // If the content was not active before, show it
+            if (!isActive) {
+                contentToToggle.classList.add('active');
+            }
+            // If it was active, it remains hidden (since we removed 'active' from all contents)
+        }
+    });
+});
 
 
- </script>
+    </script>
+
  
 </body>
 </html>

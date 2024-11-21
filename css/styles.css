@@ -1,56 +1,65 @@
 .map {
   position: relative;
+  padding: 0;
 }
-
 .map button {
   border: none;
   background: transparent;
   position: absolute;
   font-size: 2.5em;
-  color: red;
+  color: teal;
+  z-index: 100;
 }
-
-.map button.marker-1 {
+.map button.john {
   top: 45%;
   left: 23%;
 }
-
-.map button.marker-2 {
+.map button.sam {
   top: 31%;
   left: 53%;
 }
-
+.map button.alice {
+  bottom: 29%;
+  left: 60%;
+}
 .map button span {
   background-color: red;
   color: #fff;
-  padding: .5em;
-  font-size: .5em;
+  padding: 0.5em;
+  font-size: 0.5em;
   opacity: 0;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
-
 .map button:hover span {
   opacity: 1;
 }
 
 .map-info {
-  background-color: red;
+  background-color: teal;
   color: #fff;
 }
-
-.map-info .loc {
+.map-info h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+.map-info .loc-content {
   display: none;
 }
-
-.map-info .loc ul {
+.map-info .loc-content ul {
   padding: 0;
 }
-
-.map-info .loc ul li {
+.map-info .loc-content ul li {
   list-style: none;
   border-bottom: 1px solid #fff;
 }
-
-.map-info .loc.active {
+.map-info .loc-content.active {
   display: block;
+}
+.map-info .loc-content a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.map-info .loc-content a:hover {
+  color: #000;
 }
