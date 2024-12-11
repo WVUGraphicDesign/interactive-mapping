@@ -2,7 +2,7 @@
   position: relative;
   padding: 0;
 }
-.map button {
+.map button, .map .button {
   border: none;
   background: transparent;
   position: absolute;
@@ -10,19 +10,19 @@
   color: teal;
   z-index: 100;
 }
-.map button.john {
+.map button.john, .map .button.john {
   top: 47%;
   left: 23%;
 }
-.map button.school {
+.map button.school, .map .button.school {
   top: 33%;
   left: 53%;
 }
-.map button.alice {
+.map button.alice, .map .button.alice {
   bottom: 29%;
   left: 60%;
 }
-.map button .info {
+.map button .info, .map .button .info {
   position: absolute;
   top: 0;
   left: 45px;
@@ -35,17 +35,17 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
-.map button .info a {
+.map button .info a, .map .button .info a {
   font-size: 0.8rem;
   display: block;
   color: #fff;
   text-decoration: none;
   border-top: 1px solid #fff;
 }
-.map button .info a:hover {
+.map button .info a:hover, .map .button .info a:hover {
   color: #000;
 }
-.map button:hover .info {
+.map button:hover .info, .map .button:hover .info {
   opacity: 1;
 }
 
